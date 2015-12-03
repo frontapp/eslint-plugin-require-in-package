@@ -1,10 +1,10 @@
 {
-  "name": "eslint-plugin-require-in-package",
-  "version": "1.0.3",
+  "name": "@front/eslint-plugin-require-in-package",
+  "version": "1.0.3-1",
   "description": "ESLint rule that validates ES6 imports are defined in local package.json",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Craftsy/eslint-plugin-require-in-package.git"
+    "url": "https://github.com/frontapp/eslint-plugin-require-in-package"
   },
   "keywords": [
     "eslint",
