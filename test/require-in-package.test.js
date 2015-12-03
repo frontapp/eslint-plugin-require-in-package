@@ -7,12 +7,12 @@ var ruleTester = new RuleTester();
 
 
 var valid = [
-    "import fs from 'fs';",
-    "import eslint from 'eslint';",
-    "import h from './i';",
-    "import api from 'eslint/lib/api';",
-    "import yay from '@craftsy/yay';",
-    "import yay from '@craftsy/yay/lib/go';",
+    "var fs = require('fs')",
+    "var eslint = require('eslint');",
+    "var i = require('./i');",
+    "var api = require('eslint/lib/api');",
+    "var yay = require('@craftsy/yay');",
+    "var yay = require('@craftsy/yay/lib/go');",
 ].map(function(code) {
     return {
         code: code,
@@ -25,12 +25,10 @@ var valid = [
 var message = "dependency not in the local package.json";
 
 var invalid = [
-    "import * as a from 'b';",
-    "import c from 'd';",
-    "import {e as f} from 'g';",
-    "import api from 'nonexistant/blah';",
-    "import boo from '@craftsy/boo';",
-    "import boo from '@craftsy/boo/lib/go';",
+    "var a = require('b');",
+    "var api = require('nonexistant/blah');",
+    "var boo = require('@craftsy/boo');",
+    "var boo = require('@craftsy/boo/lib/go');",
 ].map(function(code) {
     return {
         code: code,
